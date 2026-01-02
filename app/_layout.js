@@ -2,7 +2,7 @@ import { Platform } from 'react-native';
 import { NativeTabs, Icon, Label, VectorIcon } from 'expo-router/unstable-native-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
-import { SplashScreen } from 'expo-router';
+import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import {
   useFonts,
@@ -34,6 +34,15 @@ export default function RootLayout() {
 
   if (!fontsLoaded && !fontError) {
     return null;
+  }
+
+  if (Platform.OS === 'web') {
+    return (
+      <>
+        <StatusBar style="dark" />
+        <Stack screenOptions={{ headerShown: false }} />
+      </>
+    );
   }
 
   return (

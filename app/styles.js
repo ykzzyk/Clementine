@@ -68,12 +68,17 @@ export const styles = StyleSheet.create({
   screenRoot: {
     flex: 1,
   },
-  screenBody: {
-    flex: 1,
-  },
   scroll: {
+    flexGrow: 1,
     padding: 20,
     paddingBottom: 80,
+  },
+  backgroundLayer: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 0,
+  },
+  screenContent: {
+    zIndex: 1,
   },
   glowTop: {
     position: 'absolute',
