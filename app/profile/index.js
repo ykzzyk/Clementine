@@ -1,11 +1,11 @@
-import { SafeAreaView, ScrollView, Text, View, Pressable } from 'react-native';
-import ScreenBackground from './components/ScreenBackground';
-import { styles } from './styles';
+import { ScrollView, Text, View, Pressable } from 'react-native';
+import ScreenBackground from '@/components/ScreenBackground';
+import { styles } from '../styles';
 
 export default function ProfileScreen() {
   return (
     <ScreenBackground>
-      <SafeAreaView style={styles.safe}>
+      <View style={styles.screenBody}>
         <ScrollView contentContainerStyle={styles.scroll}>
           <View style={styles.profileHeader}>
             <View style={styles.profileAvatar}>
@@ -35,7 +35,7 @@ export default function ProfileScreen() {
             </Pressable>
           </View>
         </ScrollView>
-      </SafeAreaView>
+      </View>
     </ScreenBackground>
   );
 }

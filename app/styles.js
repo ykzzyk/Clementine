@@ -68,7 +68,7 @@ export const styles = StyleSheet.create({
   screenRoot: {
     flex: 1,
   },
-  safe: {
+  screenBody: {
     flex: 1,
   },
   scroll: {

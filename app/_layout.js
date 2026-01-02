@@ -40,7 +40,7 @@ export default function RootLayout() {
     <>
       <StatusBar style="dark" />
       <NativeTabs minimizeBehavior="onScrollDown">
-        <NativeTabs.Trigger name="index">
+        <NativeTabs.Trigger name="home">
           <Label>Home</Label>
           {Platform.select({
             ios: <Icon sf={{ default: 'house', selected: 'house.fill' }} />,
@@ -81,11 +81,11 @@ export default function RootLayout() {
         <NativeTabs.Trigger name="explore">
           <Label>Explore</Label>
           {Platform.select({
-            ios: <Icon sf={{ default: 'compass', selected: 'compass.fill' }} />,
+            ios: <Icon sf={{ default: 'safari', selected: 'safari.fill' }} />,
             android: (
               <Icon src={<VectorIcon family={Ionicons} name="compass" />} />
             ),
-            default: <Icon sf="compass" />,
+            default: <Icon sf="safari" />,
           })}
         </NativeTabs.Trigger>
         <NativeTabs.Trigger name="profile">

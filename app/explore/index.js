@@ -1,11 +1,11 @@
-import { SafeAreaView, ScrollView, Text, View } from 'react-native';
-import ScreenBackground from './components/ScreenBackground';
-import { styles } from './styles';
+import { ScrollView, Text, View } from 'react-native';
+import ScreenBackground from '@/components/ScreenBackground';
+import { styles } from '../styles';
 
 export default function ExploreScreen() {
   return (
     <ScreenBackground>
-      <SafeAreaView style={styles.safe}>
+      <View style={styles.screenBody}>
         <ScrollView contentContainerStyle={styles.scroll}>
           <Text style={styles.sectionTitle}>Explore</Text>
           <Text style={styles.sectionSubtitle}>
@@ -32,7 +32,7 @@ export default function ExploreScreen() {
             </View>
           </View>
         </ScrollView>
-      </SafeAreaView>
+      </View>
     </ScreenBackground>
   );
 }
